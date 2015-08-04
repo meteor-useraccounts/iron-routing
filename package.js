@@ -25,7 +25,7 @@ Package.onUse(function(api) {
 
   api.imply([
     'useraccounts:core@1.11.1',
-    'iron:router@1.0.7',
+    'iron:router@1.0.9',
   ], ['client', 'server']);
 
   api.addFiles([
