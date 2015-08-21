@@ -133,6 +133,14 @@ Router.plugin('ensureSignedIn', {
 });
 ```
 
+while an even better example could be
+
+```javascript
+Router.plugin('ensureSignedIn', {
+  except: _.pluck(AccountsTemplates.routes, 'name').concat(['home', 'contacts'])
+});
+```
+
 if, instead, it's only a bunch of routes to be protected you could do (even more than once inside different files...):
 
 ```javascript
