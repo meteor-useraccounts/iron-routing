@@ -52,7 +52,9 @@ AccountsTemplates.configureRoute('signIn');
 
 This will set up the sign in route with a full-page form letting users access your app.
 
-But you can also pass in more options to adapt it to your needs with:
+**NOTE:** some routes need other useraccounts' regular options to be set in advance. Please make sure to have your calls to `AccountsTemplates.configureRoute` be executed after your calls to the regular `AccountsTemplates.configure`
+
+Actually, you can also pass in more options to adapt it to your needs with:
 
 ```javascript
 AccountsTemplates.configureRoute(route_code, options);
