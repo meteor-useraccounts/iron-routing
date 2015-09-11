@@ -124,7 +124,12 @@ It behaves nicely letting the required route path inside the address bar and bri
 To protect **all** you routes use it like this:
 
 ```javascript
+// Protect all Routes
 Router.plugin('ensureSignedIn');
+
+// If you are using other plugins, pay attention to their load order.
+// Use *after* so you don't get 404's on your protected routes.
+Router.onBeforeAction('dataNotFound');
 ```
 
 While in case you want to protect *almost all* your routes you might want to set up the plugin this way:
