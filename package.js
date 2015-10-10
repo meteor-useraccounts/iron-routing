@@ -9,7 +9,7 @@
 Package.describe({
   name: 'useraccounts:iron-routing',
   summary: 'UserAccounts package providing routes configuration capability via iron:router.',
-  version: '1.12.3',
+  version: '1.12.4',
   git: 'https://github.com/meteor-useraccounts/iron-routing.git'
 });
 
@@ -24,7 +24,7 @@ Package.onUse(function(api) {
   ], ['client', 'server']);
 
   api.imply([
-    'useraccounts:core@1.12.3',
+    'useraccounts:core@1.12.4',
     'iron:router@1.0.9',
   ], ['client', 'server']);
 
