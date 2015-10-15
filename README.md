@@ -1,3 +1,5 @@
+[![Meteor Icon](http://icon.meteor.com/package/useraccounts:iron-routing)](https://atmospherejs.com/useraccounts/iron-routing)
+
 # Iron Router add-on for User Accounts
 
 User Accounts is a suite of packages for the [Meteor.js](https://www.meteor.com/) platform. It provides highly customizable user accounts UI templates for many different front-end frameworks. At the moment it includes forms for sign in, sign up, forgot password, reset password, change password, enroll account.
