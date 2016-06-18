@@ -138,7 +138,7 @@ While in case you want to protect *almost all* your routes you might want to set
 
 ```javascript
 Router.plugin('ensureSignedIn', {
-    except: ['home', 'atSignIn', 'atSignUp', 'atForgotPassword']
+    except: ['home', 'atSignIn', 'atSignUp', 'atForgotPwd']
 });
 ```
 
