@@ -166,3 +166,23 @@ AccountsTemplates.configureRoute('ensureSignedIn', {
     layoutTemplate: 'myLayout',
 });
 ```
+
+When using the **ensureSignedIn** plugin with the **except** parameter make sure the password reset token is configured properly on your route and you have a publication:
+
+```javascript
+AccountsTemplates.configureRoute('resetPwd', {
+  waitOn: function(){
+    return Meteor.subscribe('enrolledUser',this.params.paramToken);
+  },
+  data: function(){
+    if(Meteor.userId())  Router.go('root'); // redirect the logged in user to a route
+    else return Meteor.users.findOne();
+  }
+});
+
+// publication (somewhere in /server)
+Meteor.publish('enrolledUser', function(token) {
+  check(token, Match.Any);
+  return Meteor.users.find({"services.password.reset.token": token}, {fields: {_id: 1}});
+});
+```
